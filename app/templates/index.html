@@ -1,0 +1,107 @@
+{% extends 'base.html'%} {%block content %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/index.css">
+<div class="landing">
+
+</div>
+
+<div class="welcome" id="welcome">
+    <br>
+
+
+    <div class="orders" id="order">
+        <h1 class="text-center" id="order-pizza">Pizza Order</h1>
+        <div class="form-group row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8 order-overlay text-center">
+                <form class="col-sm-6 offset-sm-3 text center">
+                    <label>Choose your appealing pizza</label>
+                    <select class="custom-select custom-select-md mb-3 flavour" required>
+                                              <option value="spicychicken">Spicy Chicken</option>
+                                              <option value="hawaiian">Hawaiian</option>
+                                              <option value="periperi">Peri-Peri</option>
+                                              <option value="bbq">BBQ Steak</option>
+                                              <option value="meatdel">Meat Deluxe</option>
+                                              <option value="macbbq">Macon BBQ</option>
+                                              <option value="spicyboere">Spicy Boerewors</option>
+                                              <option value="regpiz">Regina Pizza</option>
+                                              <option value="vegfeast">Veg Feast</option>
+                                              <option value="roastveg">Roast Veg & Feta</option>
+                                              <option value="mushpizz">Mushroom Pizza</option>
+                                              <option value="tikka">Tikka</option>
+                                            </select>
+                    <label>Choose the size you'll like</label>
+                    <select class="custom-select custom-select-md mb-3" id="size" required>
+                                              <option value="regular">Regular</option>
+                                              <option value="medium">Medium</option>
+                                              <option value="large">Large</option>
+                                              <option value="mega">Mega</option>
+                                            </select>
+                    <label for="crust">Choose the crust you'd like</label>
+                    <select class="custom-select custom-select-md mb-3" id="crust" required>"
+                                              <option value="thin">Thin Crust @ 100/=</option>
+                                              <option value="thick">Thick Crust @ 150/=</option>
+                                              <option value="flatbread">Flatbread Crust @ 180/=</option>
+                                              <option value="custcrust">Custom Crust @ 250/=</option>
+                                            </select>
+                    <label for="crust">Select extra toppings you'd like</label>
+                    <select class="custom-select custom-select-md mb-3" id="toppings" required>"
+                                              <option value="tomato">Tomato @ 50/=</option>
+                                              <option value="cheesy">Cheese @ 150/=</option>
+                                              <option value="onions">Onions @ 50/=</option>
+                                              <option value="pineapples">Pineapples @ 150/=</option>
+                                              <option value="chicken">Chicken @ 180/=</option>
+                                              <option value="macon">Macon @ 180/=</option>
+                                              <option value="spice">Spice @ 90/=</option>
+                                              <option value="olives">Olives @ 100/=</option>
+                                              <option value="bacon">Bacon @ 150/=</option>
+                                              <option value="veg">Veges @ 50/=</option>
+                                              <option value="mushroom">Mushroom @ 90/=</option>
+                                              <option value="beef">Beef @ 110/=</option>
+                                              <option value="greenpep">Greenpepper @ 60/=</option>
+                                              </select>
+                    <label for="number">Number of Pizza</label>
+                    <input type="number" class="form-control" id="number" placeholder="Pizza Number" min="1" required>
+                </form>
+                <a href="#summary">
+                    <button type="submit" class="btn btn-success checkout" id="checkout">Checkout</button>
+                </a>
+            </div>
+
+            <div class="col-sm-2"></div>
+        </div>
+    </div>
+
+    <div class="order-summary" id="sum-order">
+        <h1 class="text-center" id="summary">Order Summary</h1>
+        <h2 class="text-center summary">As per your order;</h2>
+        <ol id="list" class="text-center sum">
+        </ol>
+
+        <div class="cdata-overlay">
+            <div class="customerdata row">
+                <div class="col-sm-3"></div>
+                <form action="" class="form-group col-sm-6 data">
+                    <input type="text" class="form-control cdata" placeholder="Your Name Please:">
+                    <input type="text" class="form-control cdata" placeholder="Your Phone Number:">
+                    <input type="text" class="form-control cdata" placeholder="Where are you located?:">
+                    <button class="btn bg-info text-center d-block mx-auto go">Make Delivery</button>
+                </form>
+
+                <div class="col-sm-3"></div>
+            </div>
+        </div>
+        <div class="d-block mx-auto text-center">
+            <button class='deliver'>Make Delivery</button>
+            <button class='delivernot'>Pick Up</button>
+        </div>
+    </div>
+</div>
+<div class="col-sm-1"></div>
+</div>
+</div>
+</div>
+<script src="static/js/java.js"></script>
+
+{% endblock %}
